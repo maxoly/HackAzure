@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "WACloudStorageClient.h"
 
-@interface MessaggiViewController : UITableViewController<WACloudStorageClientDelegate>
+@interface MessaggiViewController : UITableViewController<WACloudStorageClientDelegate, NSFetchedResultsControllerDelegate>
 {
     WACloudStorageClient*	tableClient;
     NSMutableArray*			entityList;
 }
 
 @property (nonatomic, retain) NSArray *entityList;
+@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @end
