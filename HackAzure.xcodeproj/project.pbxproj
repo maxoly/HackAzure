@@ -12,6 +12,18 @@
 		565CF9EB1424A99700BE7074 /* WAConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 565CF9E81424A99700BE7074 /* WAConfiguration.m */; };
 		565CF9ED1424A9B600BE7074 /* libwatoolkitios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 565CF9EC1424A9B600BE7074 /* libwatoolkitios.a */; };
 		565CF9EF1424AA5600BE7074 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 565CF9EE1424AA5600BE7074 /* libxml2.2.dylib */; };
+		565CFA291424C4A000BE7074 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 565CFA271424C4A000BE7074 /* plus.png */; };
+		565CFA2A1424C4A000BE7074 /* plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 565CFA281424C4A000BE7074 /* plus@2x.png */; };
+		565CFA2D1424C50800BE7074 /* address.png in Resources */ = {isa = PBXBuildFile; fileRef = 565CFA2B1424C50800BE7074 /* address.png */; };
+		565CFA2E1424C50800BE7074 /* address@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 565CFA2C1424C50800BE7074 /* address@2x.png */; };
+		565CFA311424C5CF00BE7074 /* mex.png in Resources */ = {isa = PBXBuildFile; fileRef = 565CFA2F1424C5CE00BE7074 /* mex.png */; };
+		565CFA321424C5CF00BE7074 /* mex@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 565CFA301424C5CF00BE7074 /* mex@2x.png */; };
+		565CFA361424C68600BE7074 /* RubricaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 565CFA341424C68500BE7074 /* RubricaViewController.m */; };
+		565CFA371424C68600BE7074 /* RubricaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 565CFA351424C68500BE7074 /* RubricaViewController.xib */; };
+		565CFA3B1424C6E000BE7074 /* NuovoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 565CFA391424C6DF00BE7074 /* NuovoViewController.m */; };
+		565CFA3C1424C6E000BE7074 /* NuovoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 565CFA3A1424C6E000BE7074 /* NuovoViewController.xib */; };
+		565CFA761424C7B200BE7074 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565CFA751424C7B100BE7074 /* CoreData.framework */; };
+		565CFA791424C86700BE7074 /* HackAzure.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 565CFA771424C86600BE7074 /* HackAzure.xcdatamodeld */; };
 		A05B1DE41424A7B400163202 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05B1DE31424A7B400163202 /* UIKit.framework */; };
 		A05B1DE61424A7B400163202 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05B1DE51424A7B400163202 /* Foundation.framework */; };
 		A05B1DE81424A7B400163202 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05B1DE71424A7B400163202 /* CoreGraphics.framework */; };
@@ -19,10 +31,10 @@
 		A05B1DF01424A7B400163202 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A05B1DEF1424A7B400163202 /* main.m */; };
 		A05B1DF41424A7B400163202 /* HackAzureAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A05B1DF31424A7B400163202 /* HackAzureAppDelegate.m */; };
 		A05B1DF71424A7B400163202 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05B1DF51424A7B400163202 /* MainWindow.xib */; };
-		A05B1DFA1424A7B400163202 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05B1DF91424A7B400163202 /* RootViewController.m */; };
+		A05B1DFA1424A7B400163202 /* MessaggiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05B1DF91424A7B400163202 /* MessaggiViewController.m */; };
 		A05B1DFD1424A7B400163202 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05B1DFB1424A7B400163202 /* RootViewController.xib */; };
-		A05B1E1C1424B20A00163202 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05B1E1B1424B20A00163202 /* AddressBook.framework */; };
-		A05B1E1F1424B4F000163202 /* AddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A05B1E1E1424B4F000163202 /* AddressBookManager.m */; };
+		A0BE8C911424CE5500046D46 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BE8C901424CE5500046D46 /* AddressBook.framework */; };
+		A0BE8C941424CEB000046D46 /* AddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BE8C931424CEB000046D46 /* AddressBookManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +71,20 @@
 		565CF9E81424A99700BE7074 /* WAConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAConfiguration.m; sourceTree = "<group>"; };
 		565CF9EC1424A9B600BE7074 /* libwatoolkitios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libwatoolkitios.a; sourceTree = SOURCE_ROOT; };
 		565CF9EE1424AA5600BE7074 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		565CFA271424C4A000BE7074 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
+		565CFA281424C4A000BE7074 /* plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus@2x.png"; sourceTree = "<group>"; };
+		565CFA2B1424C50800BE7074 /* address.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = address.png; sourceTree = "<group>"; };
+		565CFA2C1424C50800BE7074 /* address@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "address@2x.png"; sourceTree = "<group>"; };
+		565CFA2F1424C5CE00BE7074 /* mex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mex.png; sourceTree = "<group>"; };
+		565CFA301424C5CF00BE7074 /* mex@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mex@2x.png"; sourceTree = "<group>"; };
+		565CFA331424C68400BE7074 /* RubricaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RubricaViewController.h; sourceTree = "<group>"; };
+		565CFA341424C68500BE7074 /* RubricaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RubricaViewController.m; sourceTree = "<group>"; };
+		565CFA351424C68500BE7074 /* RubricaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RubricaViewController.xib; sourceTree = "<group>"; };
+		565CFA381424C6DF00BE7074 /* NuovoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NuovoViewController.h; sourceTree = "<group>"; };
+		565CFA391424C6DF00BE7074 /* NuovoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NuovoViewController.m; sourceTree = "<group>"; };
+		565CFA3A1424C6E000BE7074 /* NuovoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NuovoViewController.xib; sourceTree = "<group>"; };
+		565CFA751424C7B100BE7074 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		565CFA781424C86700BE7074 /* HackAzure.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HackAzure.xcdatamodel; sourceTree = "<group>"; };
 		A05B1DDF1424A7B400163202 /* HackAzure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackAzure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05B1DE31424A7B400163202 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A05B1DE51424A7B400163202 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -70,12 +96,12 @@
 		A05B1DF21424A7B400163202 /* HackAzureAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HackAzureAppDelegate.h; sourceTree = "<group>"; };
 		A05B1DF31424A7B400163202 /* HackAzureAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HackAzureAppDelegate.m; sourceTree = "<group>"; };
 		A05B1DF61424A7B400163202 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		A05B1DF81424A7B400163202 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		A05B1DF91424A7B400163202 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		A05B1DF81424A7B400163202 /* MessaggiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessaggiViewController.h; sourceTree = "<group>"; };
+		A05B1DF91424A7B400163202 /* MessaggiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessaggiViewController.m; sourceTree = "<group>"; };
 		A05B1DFC1424A7B400163202 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
-		A05B1E1B1424B20A00163202 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		A05B1E1D1424B4F000163202 /* AddressBookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookManager.h; sourceTree = "<group>"; };
-		A05B1E1E1424B4F000163202 /* AddressBookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookManager.m; sourceTree = "<group>"; };
+		A0BE8C901424CE5500046D46 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		A0BE8C921424CEB000046D46 /* AddressBookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookManager.h; sourceTree = "<group>"; };
+		A0BE8C931424CEB000046D46 /* AddressBookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +114,8 @@
 				A05B1DE41424A7B400163202 /* UIKit.framework in Frameworks */,
 				A05B1DE61424A7B400163202 /* Foundation.framework in Frameworks */,
 				A05B1DE81424A7B400163202 /* CoreGraphics.framework in Frameworks */,
-				A05B1E1C1424B20A00163202 /* AddressBook.framework in Frameworks */,
+				565CFA761424C7B200BE7074 /* CoreData.framework in Frameworks */,
+				A0BE8C911424CE5500046D46 /* AddressBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +178,8 @@
 				A05B1DE31424A7B400163202 /* UIKit.framework */,
 				A05B1DE51424A7B400163202 /* Foundation.framework */,
 				A05B1DE71424A7B400163202 /* CoreGraphics.framework */,
-				A05B1E1B1424B20A00163202 /* AddressBook.framework */,
+				565CFA751424C7B100BE7074 /* CoreData.framework */,
+				A0BE8C901424CE5500046D46 /* AddressBook.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -163,12 +191,19 @@
 				A05B1DF21424A7B400163202 /* HackAzureAppDelegate.h */,
 				A05B1DF31424A7B400163202 /* HackAzureAppDelegate.m */,
 				A05B1DF51424A7B400163202 /* MainWindow.xib */,
-				A05B1DF81424A7B400163202 /* RootViewController.h */,
-				A05B1DF91424A7B400163202 /* RootViewController.m */,
+				A05B1DF81424A7B400163202 /* MessaggiViewController.h */,
+				A05B1DF91424A7B400163202 /* MessaggiViewController.m */,
 				A05B1DFB1424A7B400163202 /* RootViewController.xib */,
-				A05B1E1D1424B4F000163202 /* AddressBookManager.h */,
-				A05B1E1E1424B4F000163202 /* AddressBookManager.m */,
 				A05B1DEA1424A7B400163202 /* Supporting Files */,
+				565CFA331424C68400BE7074 /* RubricaViewController.h */,
+				565CFA341424C68500BE7074 /* RubricaViewController.m */,
+				565CFA351424C68500BE7074 /* RubricaViewController.xib */,
+				565CFA381424C6DF00BE7074 /* NuovoViewController.h */,
+				565CFA391424C6DF00BE7074 /* NuovoViewController.m */,
+				565CFA3A1424C6E000BE7074 /* NuovoViewController.xib */,
+				A0BE8C921424CEB000046D46 /* AddressBookManager.h */,
+				A0BE8C931424CEB000046D46 /* AddressBookManager.m */,
+				565CFA771424C86600BE7074 /* HackAzure.xcdatamodeld */,
 			);
 			path = HackAzure;
 			sourceTree = "<group>";
@@ -176,6 +211,12 @@
 		A05B1DEA1424A7B400163202 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				565CFA2F1424C5CE00BE7074 /* mex.png */,
+				565CFA301424C5CF00BE7074 /* mex@2x.png */,
+				565CFA2B1424C50800BE7074 /* address.png */,
+				565CFA2C1424C50800BE7074 /* address@2x.png */,
+				565CFA271424C4A000BE7074 /* plus.png */,
+				565CFA281424C4A000BE7074 /* plus@2x.png */,
 				A05B1DEB1424A7B400163202 /* HackAzure-Info.plist */,
 				A05B1DEC1424A7B400163202 /* InfoPlist.strings */,
 				A05B1DEF1424A7B400163202 /* main.m */,
@@ -261,6 +302,14 @@
 				A05B1DEE1424A7B400163202 /* InfoPlist.strings in Resources */,
 				A05B1DF71424A7B400163202 /* MainWindow.xib in Resources */,
 				A05B1DFD1424A7B400163202 /* RootViewController.xib in Resources */,
+				565CFA291424C4A000BE7074 /* plus.png in Resources */,
+				565CFA2A1424C4A000BE7074 /* plus@2x.png in Resources */,
+				565CFA2D1424C50800BE7074 /* address.png in Resources */,
+				565CFA2E1424C50800BE7074 /* address@2x.png in Resources */,
+				565CFA311424C5CF00BE7074 /* mex.png in Resources */,
+				565CFA321424C5CF00BE7074 /* mex@2x.png in Resources */,
+				565CFA371424C68600BE7074 /* RubricaViewController.xib in Resources */,
+				565CFA3C1424C6E000BE7074 /* NuovoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,11 +322,14 @@
 			files = (
 				A05B1DF01424A7B400163202 /* main.m in Sources */,
 				A05B1DF41424A7B400163202 /* HackAzureAppDelegate.m in Sources */,
-				A05B1DFA1424A7B400163202 /* RootViewController.m in Sources */,
+				A05B1DFA1424A7B400163202 /* MessaggiViewController.m in Sources */,
 				565CF9E91424A99700BE7074 /* ServiceCall.m in Sources */,
 				565CF9EA1424A99700BE7074 /* UIViewController+ShowError.m in Sources */,
 				565CF9EB1424A99700BE7074 /* WAConfiguration.m in Sources */,
-				A05B1E1F1424B4F000163202 /* AddressBookManager.m in Sources */,
+				565CFA361424C68600BE7074 /* RubricaViewController.m in Sources */,
+				565CFA3B1424C6E000BE7074 /* NuovoViewController.m in Sources */,
+				565CFA791424C86700BE7074 /* HackAzure.xcdatamodeld in Sources */,
+				A0BE8C941424CEB000046D46 /* AddressBookManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +488,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		565CFA771424C86600BE7074 /* HackAzure.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				565CFA781424C86700BE7074 /* HackAzure.xcdatamodel */,
+			);
+			currentVersion = 565CFA781424C86700BE7074 /* HackAzure.xcdatamodel */;
+			path = HackAzure.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A05B1DD61424A7B300163202 /* Project object */;
 }

@@ -7,11 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WAAuthenticationCredential.h"
+#import "WAConfiguration.h"
 
-@interface HackAzureAppDelegate : NSObject <UIApplicationDelegate>
+@interface HackAzureAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate>
+{
+    WAAuthenticationCredential *authenticationCredential;
+}
 
+@property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
+@property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+@property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) WAAuthenticationCredential *authenticationCredential;
 
-@property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
+
+- (void)saveContext;
+- (NSURL *)applicationDocumentsDirectory;
 
 @end
