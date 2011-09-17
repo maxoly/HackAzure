@@ -7,18 +7,36 @@
 //
 
 #import "RootViewController.h"
+#import "HackAzureAppDelegate.h"
+#import "WAAuthenticationCredential.h"
 
+#define sim @"3289433148"
 @implementation RootViewController
 
+@synthesize entityList;
 
 - (void)viewDidLoad
 {
+    WAConfiguration* config = [WAConfiguration sharedConfiguration];	
+    HackAzureAppDelegate *appDelegate = (HackAzureAppDelegate *)[[UIApplication sharedApplication] delegate];
+	
+    appDelegate.authenticationCredential = [WAAuthenticationCredential credentialWithAzureServiceAccount:config.accountName accessKey:config.accessKey];
+    
+    [super viewDidLoad];
+	
+	tableClient = [[WACloudStorageClient storageClientWithCredential:appDelegate.authenticationCredential] retain];
+	tableClient.delegate = self;
+    
+
+    
     [super viewDidLoad];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    [tableClient peekQueueMessages:@"gvvv" fetchCount:1000];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -52,7 +70,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return [self.entityList count];
 }
 
 // Customize the appearance of table view cells.
@@ -64,8 +82,10 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
-
+    WAQueueMessage *queueMessage = [self.entityList objectAtIndex:indexPath.row];
+    
     // Configure the cell.
+    cell.textLabel.text = queueMessage.messageText;
     return cell;
 }
 
@@ -112,13 +132,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-    // ...
-    // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-	*/
 }
 
 - (void)didReceiveMemoryWarning
@@ -139,7 +152,34 @@
 
 - (void)dealloc
 {
+    [tableClient release];
+    [entityList release];
+    
     [super dealloc];
+}
+
+
+#pragma mark - CloudStorageClientDelegate methods
+
+- (void)storageClient:(WACloudStorageClient *)client didFailRequest:request withError:error
+{
+	//[self showError:error];
+}
+
+- (void)storageClient:(WACloudStorageClient *)client didFetchEntities:(NSArray *)entities fromTableNamed:(NSString *)tableName
+{
+	self.entityList = [[entities mutableCopy] autorelease];
+	if ([entities count] == 0)
+	{
+		self.navigationItem.rightBarButtonItem = nil;
+	}
+	[self.tableView reloadData];
+}
+
+- (void)storageClient:(WACloudStorageClient *)client didPeekQueueMessages:(NSArray *)queueMessages
+{
+	self.entityList = [[queueMessages mutableCopy] autorelease];
+	[self.tableView reloadData];
 }
 
 @end

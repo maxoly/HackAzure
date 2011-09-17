@@ -34,5 +34,31 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>ToolkitConfig</key>
+	<dict>
+		<key>CloudReadyACS</key>
+		<dict>
+			<key>ACSNamespace</key>
+			<string>{the namespace of the ACS service you are using}</string>
+			<key>ACSRealm</key>
+			<string>uri:wazmobiletoolkit</string>
+			<key>ProxyService</key>
+			<string>{the service name where the ACS Cloud Ready package is deployed}</string>
+		</dict>
+		<key>CloudReadySimple</key>
+		<dict>
+			<key>ProxyService</key>
+			<string>{the service name where the Membership Cloud Ready package is deployed}</string>
+		</dict>
+		<key>ConnectionType</key>
+		<string>Direct</string>
+		<key>Direct</key>
+		<dict>
+			<key>AccountName</key>
+			<string>hackitaly2</string>
+			<key>DirectAccessKey</key>
+			<string>VAPZyqvxO0t/vf/r6sdEVB0YpKclzHNa91uW9y84YRc7evONCN7V0vWZFuofVwsPeHa93UHMUvvOU9zEipfMvg==</string>
+		</dict>
+	</dict>
 </dict>
 </plist>

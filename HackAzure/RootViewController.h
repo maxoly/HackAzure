@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WACloudStorageClient.h"
 
-@interface RootViewController : UITableViewController
+@interface RootViewController : UITableViewController<WACloudStorageClientDelegate>
+{
+    WACloudStorageClient*	tableClient;
+    NSMutableArray*			entityList;
+}
+
+@property (nonatomic, retain) NSArray *entityList;
 
 @end

@@ -12,6 +12,12 @@
 		565CF9EB1424A99700BE7074 /* WAConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 565CF9E81424A99700BE7074 /* WAConfiguration.m */; };
 		565CF9ED1424A9B600BE7074 /* libwatoolkitios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 565CF9EC1424A9B600BE7074 /* libwatoolkitios.a */; };
 		565CF9EF1424AA5600BE7074 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 565CF9EE1424AA5600BE7074 /* libxml2.2.dylib */; };
+		565CFA291424C4A000BE7074 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 565CFA271424C4A000BE7074 /* plus.png */; };
+		565CFA2A1424C4A000BE7074 /* plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 565CFA281424C4A000BE7074 /* plus@2x.png */; };
+		565CFA2D1424C50800BE7074 /* address.png in Resources */ = {isa = PBXBuildFile; fileRef = 565CFA2B1424C50800BE7074 /* address.png */; };
+		565CFA2E1424C50800BE7074 /* address@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 565CFA2C1424C50800BE7074 /* address@2x.png */; };
+		565CFA311424C5CF00BE7074 /* mex.png in Resources */ = {isa = PBXBuildFile; fileRef = 565CFA2F1424C5CE00BE7074 /* mex.png */; };
+		565CFA321424C5CF00BE7074 /* mex@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 565CFA301424C5CF00BE7074 /* mex@2x.png */; };
 		A05B1DE41424A7B400163202 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05B1DE31424A7B400163202 /* UIKit.framework */; };
 		A05B1DE61424A7B400163202 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05B1DE51424A7B400163202 /* Foundation.framework */; };
 		A05B1DE81424A7B400163202 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05B1DE71424A7B400163202 /* CoreGraphics.framework */; };
@@ -57,6 +63,12 @@
 		565CF9E81424A99700BE7074 /* WAConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAConfiguration.m; sourceTree = "<group>"; };
 		565CF9EC1424A9B600BE7074 /* libwatoolkitios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libwatoolkitios.a; sourceTree = SOURCE_ROOT; };
 		565CF9EE1424AA5600BE7074 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		565CFA271424C4A000BE7074 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
+		565CFA281424C4A000BE7074 /* plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus@2x.png"; sourceTree = "<group>"; };
+		565CFA2B1424C50800BE7074 /* address.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = address.png; sourceTree = "<group>"; };
+		565CFA2C1424C50800BE7074 /* address@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "address@2x.png"; sourceTree = "<group>"; };
+		565CFA2F1424C5CE00BE7074 /* mex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mex.png; sourceTree = "<group>"; };
+		565CFA301424C5CF00BE7074 /* mex@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mex@2x.png"; sourceTree = "<group>"; };
 		A05B1DDF1424A7B400163202 /* HackAzure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackAzure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05B1DE31424A7B400163202 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A05B1DE51424A7B400163202 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -167,6 +179,12 @@
 		A05B1DEA1424A7B400163202 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				565CFA2F1424C5CE00BE7074 /* mex.png */,
+				565CFA301424C5CF00BE7074 /* mex@2x.png */,
+				565CFA2B1424C50800BE7074 /* address.png */,
+				565CFA2C1424C50800BE7074 /* address@2x.png */,
+				565CFA271424C4A000BE7074 /* plus.png */,
+				565CFA281424C4A000BE7074 /* plus@2x.png */,
 				A05B1DEB1424A7B400163202 /* HackAzure-Info.plist */,
 				A05B1DEC1424A7B400163202 /* InfoPlist.strings */,
 				A05B1DEF1424A7B400163202 /* main.m */,
@@ -252,6 +270,12 @@
 				A05B1DEE1424A7B400163202 /* InfoPlist.strings in Resources */,
 				A05B1DF71424A7B400163202 /* MainWindow.xib in Resources */,
 				A05B1DFD1424A7B400163202 /* RootViewController.xib in Resources */,
+				565CFA291424C4A000BE7074 /* plus.png in Resources */,
+				565CFA2A1424C4A000BE7074 /* plus@2x.png in Resources */,
+				565CFA2D1424C50800BE7074 /* address.png in Resources */,
+				565CFA2E1424C50800BE7074 /* address@2x.png in Resources */,
+				565CFA311424C5CF00BE7074 /* mex.png in Resources */,
+				565CFA321424C5CF00BE7074 /* mex@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

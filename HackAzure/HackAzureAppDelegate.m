@@ -11,13 +11,27 @@
 @implementation HackAzureAppDelegate
 
 @synthesize window = _window;
-@synthesize navigationController = _navigationController;
+@synthesize authenticationCredential;
+@synthesize tabBarController=_tabBarController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    WAConfiguration* config = [WAConfiguration sharedConfiguration];	
+	if(!config)
+	{
+		UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Configuration Error" 
+															message:@"You must update the ToolkitConfig section in the application's info.plist file before running the first time."
+														   delegate:self 
+												  cancelButtonTitle:@"Close" 
+												  otherButtonTitles:nil];
+		[alertView show];		
+		[alertView release];
+		return YES;
+	}
+    
     // Override point for customization after application launch.
     // Add the navigation controller's view to the window and display.
-    self.window.rootViewController = self.navigationController;
+    self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -64,7 +78,7 @@
 - (void)dealloc
 {
     [_window release];
-    [_navigationController release];
+    [_tabBarController release];
     [super dealloc];
 }
 
