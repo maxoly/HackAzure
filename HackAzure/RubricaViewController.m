@@ -44,9 +44,6 @@
     self.navigationItem.title = @"Rubrica";
 
     _abManager = [[AddressBookManager alloc] init];
-    
-    [_abManager reload];
-    NSLog(@"contacts: %@", _abManager.contacts);
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -67,6 +64,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    [_abManager reload];
+    NSLog(@"contacts: %@", _abManager.contacts);
 }
 
 - (void)viewDidAppear:(BOOL)animated
