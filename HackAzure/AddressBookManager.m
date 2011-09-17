@@ -141,6 +141,16 @@
     [_contacts retain];
 }
 
+- (NSString *)contactNameForPhoneNumber:(NSString *)phoneNumber
+{
+    for (NSString *key in [_contacts allKeys]) {
+        if ([phoneNumber isEqualToString:key]) {
+            return [_contacts valueForKey:key];
+        }
+    }
+    return nil;
+}
+
 - (OrderedDictionary *)contacts
 {
     return [OrderedDictionary dictionaryWithDictionary:_contacts];

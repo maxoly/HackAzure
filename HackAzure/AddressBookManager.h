@@ -22,6 +22,8 @@
 - (void)reload;
 - (OrderedDictionary *)contacts;
 
+- (NSString *)contactNameForPhoneNumber:(NSString *)phoneNumber;
+
 - (void)setUserNumber:(NSString *)userNumber;
 - (NSString *)userNumber;
 
