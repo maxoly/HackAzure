@@ -18,6 +18,12 @@
 		565CFA2E1424C50800BE7074 /* address@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 565CFA2C1424C50800BE7074 /* address@2x.png */; };
 		565CFA311424C5CF00BE7074 /* mex.png in Resources */ = {isa = PBXBuildFile; fileRef = 565CFA2F1424C5CE00BE7074 /* mex.png */; };
 		565CFA321424C5CF00BE7074 /* mex@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 565CFA301424C5CF00BE7074 /* mex@2x.png */; };
+		565CFA361424C68600BE7074 /* RubricaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 565CFA341424C68500BE7074 /* RubricaViewController.m */; };
+		565CFA371424C68600BE7074 /* RubricaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 565CFA351424C68500BE7074 /* RubricaViewController.xib */; };
+		565CFA3B1424C6E000BE7074 /* NuovoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 565CFA391424C6DF00BE7074 /* NuovoViewController.m */; };
+		565CFA3C1424C6E000BE7074 /* NuovoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 565CFA3A1424C6E000BE7074 /* NuovoViewController.xib */; };
+		565CFA761424C7B200BE7074 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565CFA751424C7B100BE7074 /* CoreData.framework */; };
+		565CFA791424C86700BE7074 /* HackAzure.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 565CFA771424C86600BE7074 /* HackAzure.xcdatamodeld */; };
 		A05B1DE41424A7B400163202 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05B1DE31424A7B400163202 /* UIKit.framework */; };
 		A05B1DE61424A7B400163202 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05B1DE51424A7B400163202 /* Foundation.framework */; };
 		A05B1DE81424A7B400163202 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05B1DE71424A7B400163202 /* CoreGraphics.framework */; };
@@ -25,7 +31,7 @@
 		A05B1DF01424A7B400163202 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A05B1DEF1424A7B400163202 /* main.m */; };
 		A05B1DF41424A7B400163202 /* HackAzureAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A05B1DF31424A7B400163202 /* HackAzureAppDelegate.m */; };
 		A05B1DF71424A7B400163202 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05B1DF51424A7B400163202 /* MainWindow.xib */; };
-		A05B1DFA1424A7B400163202 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05B1DF91424A7B400163202 /* RootViewController.m */; };
+		A05B1DFA1424A7B400163202 /* MessaggiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05B1DF91424A7B400163202 /* MessaggiViewController.m */; };
 		A05B1DFD1424A7B400163202 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05B1DFB1424A7B400163202 /* RootViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +75,14 @@
 		565CFA2C1424C50800BE7074 /* address@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "address@2x.png"; sourceTree = "<group>"; };
 		565CFA2F1424C5CE00BE7074 /* mex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mex.png; sourceTree = "<group>"; };
 		565CFA301424C5CF00BE7074 /* mex@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mex@2x.png"; sourceTree = "<group>"; };
+		565CFA331424C68400BE7074 /* RubricaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RubricaViewController.h; sourceTree = "<group>"; };
+		565CFA341424C68500BE7074 /* RubricaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RubricaViewController.m; sourceTree = "<group>"; };
+		565CFA351424C68500BE7074 /* RubricaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RubricaViewController.xib; sourceTree = "<group>"; };
+		565CFA381424C6DF00BE7074 /* NuovoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NuovoViewController.h; sourceTree = "<group>"; };
+		565CFA391424C6DF00BE7074 /* NuovoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NuovoViewController.m; sourceTree = "<group>"; };
+		565CFA3A1424C6E000BE7074 /* NuovoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NuovoViewController.xib; sourceTree = "<group>"; };
+		565CFA751424C7B100BE7074 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		565CFA781424C86700BE7074 /* HackAzure.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HackAzure.xcdatamodel; sourceTree = "<group>"; };
 		A05B1DDF1424A7B400163202 /* HackAzure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackAzure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05B1DE31424A7B400163202 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A05B1DE51424A7B400163202 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,8 +94,8 @@
 		A05B1DF21424A7B400163202 /* HackAzureAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HackAzureAppDelegate.h; sourceTree = "<group>"; };
 		A05B1DF31424A7B400163202 /* HackAzureAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HackAzureAppDelegate.m; sourceTree = "<group>"; };
 		A05B1DF61424A7B400163202 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		A05B1DF81424A7B400163202 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		A05B1DF91424A7B400163202 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		A05B1DF81424A7B400163202 /* MessaggiViewController.h */ = {isa = PBXFileReference; path = MessaggiViewController.h; sourceTree = "<group>"; };
+		A05B1DF91424A7B400163202 /* MessaggiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessaggiViewController.m; sourceTree = "<group>"; };
 		A05B1DFC1424A7B400163202 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				565CFA761424C7B200BE7074 /* CoreData.framework in Frameworks */,
 				565CF9EF1424AA5600BE7074 /* libxml2.2.dylib in Frameworks */,
 				565CF9ED1424A9B600BE7074 /* libwatoolkitios.a in Frameworks */,
 				A05B1DE41424A7B400163202 /* UIKit.framework in Frameworks */,
@@ -152,6 +167,7 @@
 		A05B1DE21424A7B400163202 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				565CFA751424C7B100BE7074 /* CoreData.framework */,
 				565CF9EE1424AA5600BE7074 /* libxml2.2.dylib */,
 				565CF9EC1424A9B600BE7074 /* libwatoolkitios.a */,
 				A05B1DE31424A7B400163202 /* UIKit.framework */,
@@ -168,10 +184,17 @@
 				A05B1DF21424A7B400163202 /* HackAzureAppDelegate.h */,
 				A05B1DF31424A7B400163202 /* HackAzureAppDelegate.m */,
 				A05B1DF51424A7B400163202 /* MainWindow.xib */,
-				A05B1DF81424A7B400163202 /* RootViewController.h */,
-				A05B1DF91424A7B400163202 /* RootViewController.m */,
+				A05B1DF81424A7B400163202 /* MessaggiViewController.h */,
+				A05B1DF91424A7B400163202 /* MessaggiViewController.m */,
 				A05B1DFB1424A7B400163202 /* RootViewController.xib */,
 				A05B1DEA1424A7B400163202 /* Supporting Files */,
+				565CFA331424C68400BE7074 /* RubricaViewController.h */,
+				565CFA341424C68500BE7074 /* RubricaViewController.m */,
+				565CFA351424C68500BE7074 /* RubricaViewController.xib */,
+				565CFA381424C6DF00BE7074 /* NuovoViewController.h */,
+				565CFA391424C6DF00BE7074 /* NuovoViewController.m */,
+				565CFA3A1424C6E000BE7074 /* NuovoViewController.xib */,
+				565CFA771424C86600BE7074 /* HackAzure.xcdatamodeld */,
 			);
 			path = HackAzure;
 			sourceTree = "<group>";
@@ -276,6 +299,8 @@
 				565CFA2E1424C50800BE7074 /* address@2x.png in Resources */,
 				565CFA311424C5CF00BE7074 /* mex.png in Resources */,
 				565CFA321424C5CF00BE7074 /* mex@2x.png in Resources */,
+				565CFA371424C68600BE7074 /* RubricaViewController.xib in Resources */,
+				565CFA3C1424C6E000BE7074 /* NuovoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,10 +313,13 @@
 			files = (
 				A05B1DF01424A7B400163202 /* main.m in Sources */,
 				A05B1DF41424A7B400163202 /* HackAzureAppDelegate.m in Sources */,
-				A05B1DFA1424A7B400163202 /* RootViewController.m in Sources */,
+				A05B1DFA1424A7B400163202 /* MessaggiViewController.m in Sources */,
 				565CF9E91424A99700BE7074 /* ServiceCall.m in Sources */,
 				565CF9EA1424A99700BE7074 /* UIViewController+ShowError.m in Sources */,
 				565CF9EB1424A99700BE7074 /* WAConfiguration.m in Sources */,
+				565CFA361424C68600BE7074 /* RubricaViewController.m in Sources */,
+				565CFA3B1424C6E000BE7074 /* NuovoViewController.m in Sources */,
+				565CFA791424C86700BE7074 /* HackAzure.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +408,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Massimo Oliviero (QUX64GU7RX)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HackAzure/HackAzure-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -398,6 +427,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "049DEB7B-91AE-4DA8-9ABF-009776090296";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -406,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Massimo Oliviero (QUX64GU7RX)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HackAzure/HackAzure-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -424,6 +455,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "049DEB7B-91AE-4DA8-9ABF-009776090296";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -450,6 +482,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		565CFA771424C86600BE7074 /* HackAzure.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				565CFA781424C86700BE7074 /* HackAzure.xcdatamodel */,
+			);
+			currentVersion = 565CFA781424C86700BE7074 /* HackAzure.xcdatamodel */;
+			path = HackAzure.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A05B1DD61424A7B300163202 /* Project object */;
 }

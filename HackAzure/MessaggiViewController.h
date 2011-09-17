@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "WACloudStorageClient.h"
 
-@interface RootViewController : UITableViewController<WACloudStorageClientDelegate>
+@interface MessaggiViewController : UITableViewController<WACloudStorageClientDelegate>
 {
     WACloudStorageClient*	tableClient;
     NSMutableArray*			entityList;

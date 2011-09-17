@@ -6,12 +6,12 @@
 //  Copyright 2011 App3. All rights reserved.
 //
 
-#import "RootViewController.h"
+#import "MessaggiViewController.h"
 #import "HackAzureAppDelegate.h"
 #import "WAAuthenticationCredential.h"
 
 #define sim @"3289433148"
-@implementation RootViewController
+@implementation MessaggiViewController
 
 @synthesize entityList;
 
@@ -30,6 +30,8 @@
 
     
     [super viewDidLoad];
+    
+    self.navigationItem.title = @"Messaggi";
 }
 
 - (void)viewWillAppear:(BOOL)animated
