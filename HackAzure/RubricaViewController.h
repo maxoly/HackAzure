@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 
 
+@class AddressBookManager;
+
 @interface RubricaViewController : UITableViewController {
     
+    AddressBookManager *_abManager;
 }
 
 @end

@@ -43,6 +43,11 @@
     
     self.navigationItem.title = @"Rubrica";
 
+    _abManager = [[AddressBookManager alloc] init];
+    
+    [_abManager reload];
+    NSLog(@"contacts: %@", _abManager.contacts);
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -55,6 +60,8 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    
+    [_abManager release];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -65,20 +72,14 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    AddressBookManager *abManager = [[AddressBookManager alloc] init];
-    
-    if (abManager.userNumber == nil) {
+        
+    if (_abManager.userNumber == nil) {
         NSLog(@"user number is missing");
         
         UserNumberViewController *viewController = [[UserNumberViewController alloc] initWithNibName:@"UserNumberViewController" bundle:nil];
         [self.navigationController pushViewController:viewController animated:YES];
         [viewController release];
     }
-    
-    NSLog(@"contacts: %@", abManager.contacts);
-    
-    [abManager release];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -99,14 +100,9 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return [_abManager.contacts count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -115,10 +111,13 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    // Configure the cell...
+    NSString *contactKey = [[_abManager.contacts allKeys] objectAtIndex:indexPath.row];
+    NSString *contactValue = [_abManager.contacts valueForKey:contactKey];
+    cell.textLabel.text = contactValue;
+    cell.detailTextLabel.text = contactKey;
     
     return cell;
 }
@@ -166,6 +165,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     // Navigation logic may go here. Create and push another view controller.
     /*
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];

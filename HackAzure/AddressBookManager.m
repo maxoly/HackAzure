@@ -16,7 +16,7 @@
     self = [super init];
     if (self) {
         
-        _contacts = [[NSMutableDictionary alloc] init];
+        _contacts = [[OrderedDictionary alloc] init];
     }
     
     return self;
@@ -38,6 +38,16 @@
     result = [result stringByReplacingOccurrencesOfString:@"-" withString:@""];
     result = [result stringByReplacingOccurrencesOfString:@" " withString:@""];
     return result;
+}
+
+- (OrderedDictionary *)sortContacts:(OrderedDictionary *)contacts
+{
+    OrderedDictionary *result = [[OrderedDictionary alloc] init];
+    NSArray *sortedKeys = [_contacts keysSortedByValueUsingSelector:@selector(compare:)];
+    for (NSString *key in sortedKeys) {
+        [result setObject:[_contacts valueForKey:key] forKey:key];
+    }
+    return [result autorelease];
 }
 
 - (void)reload
@@ -124,11 +134,16 @@
     
     CFRelease(allPeople);
     CFRelease(addressBook);
+    
+    OrderedDictionary *sortedContacts = [self sortContacts:_contacts];
+    [_contacts release];
+    _contacts = sortedContacts;
+    [_contacts retain];
 }
 
-- (NSDictionary *)contacts
+- (OrderedDictionary *)contacts
 {
-    return [NSDictionary dictionaryWithDictionary:_contacts];
+    return [OrderedDictionary dictionaryWithDictionary:_contacts];
 }
 
 - (void)setUserNumber:(NSString *)userNumber

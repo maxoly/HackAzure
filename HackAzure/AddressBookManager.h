@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OrderedDictionary.h"
 
 #define kDefaultsUserNumber @"DefaultsUserNumber"
 
@@ -14,12 +15,12 @@
 @interface AddressBookManager : NSObject {
     
 @private
-    NSMutableDictionary *_contacts;
+    OrderedDictionary *_contacts;
     NSString *_userNumber;
 }
 
 - (void)reload;
-- (NSDictionary *)contacts;
+- (OrderedDictionary *)contacts;
 
 - (void)setUserNumber:(NSString *)userNumber;
 - (NSString *)userNumber;
