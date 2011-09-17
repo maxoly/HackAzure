@@ -1,0 +1,291 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A05B1DE41424A7B400163202 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05B1DE31424A7B400163202 /* UIKit.framework */; };
+		A05B1DE61424A7B400163202 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05B1DE51424A7B400163202 /* Foundation.framework */; };
+		A05B1DE81424A7B400163202 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05B1DE71424A7B400163202 /* CoreGraphics.framework */; };
+		A05B1DEE1424A7B400163202 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A05B1DEC1424A7B400163202 /* InfoPlist.strings */; };
+		A05B1DF01424A7B400163202 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A05B1DEF1424A7B400163202 /* main.m */; };
+		A05B1DF41424A7B400163202 /* HackAzureAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A05B1DF31424A7B400163202 /* HackAzureAppDelegate.m */; };
+		A05B1DF71424A7B400163202 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05B1DF51424A7B400163202 /* MainWindow.xib */; };
+		A05B1DFA1424A7B400163202 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05B1DF91424A7B400163202 /* RootViewController.m */; };
+		A05B1DFD1424A7B400163202 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05B1DFB1424A7B400163202 /* RootViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A05B1DDF1424A7B400163202 /* HackAzure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackAzure.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A05B1DE31424A7B400163202 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A05B1DE51424A7B400163202 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A05B1DE71424A7B400163202 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A05B1DEB1424A7B400163202 /* HackAzure-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HackAzure-Info.plist"; sourceTree = "<group>"; };
+		A05B1DED1424A7B400163202 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A05B1DEF1424A7B400163202 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A05B1DF11424A7B400163202 /* HackAzure-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HackAzure-Prefix.pch"; sourceTree = "<group>"; };
+		A05B1DF21424A7B400163202 /* HackAzureAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HackAzureAppDelegate.h; sourceTree = "<group>"; };
+		A05B1DF31424A7B400163202 /* HackAzureAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HackAzureAppDelegate.m; sourceTree = "<group>"; };
+		A05B1DF61424A7B400163202 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		A05B1DF81424A7B400163202 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		A05B1DF91424A7B400163202 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		A05B1DFC1424A7B400163202 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A05B1DDC1424A7B400163202 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A05B1DE41424A7B400163202 /* UIKit.framework in Frameworks */,
+				A05B1DE61424A7B400163202 /* Foundation.framework in Frameworks */,
+				A05B1DE81424A7B400163202 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A05B1DD41424A7B300163202 = {
+			isa = PBXGroup;
+			children = (
+				A05B1DE91424A7B400163202 /* HackAzure */,
+				A05B1DE21424A7B400163202 /* Frameworks */,
+				A05B1DE01424A7B400163202 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A05B1DE01424A7B400163202 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A05B1DDF1424A7B400163202 /* HackAzure.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A05B1DE21424A7B400163202 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A05B1DE31424A7B400163202 /* UIKit.framework */,
+				A05B1DE51424A7B400163202 /* Foundation.framework */,
+				A05B1DE71424A7B400163202 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A05B1DE91424A7B400163202 /* HackAzure */ = {
+			isa = PBXGroup;
+			children = (
+				A05B1DF21424A7B400163202 /* HackAzureAppDelegate.h */,
+				A05B1DF31424A7B400163202 /* HackAzureAppDelegate.m */,
+				A05B1DF51424A7B400163202 /* MainWindow.xib */,
+				A05B1DF81424A7B400163202 /* RootViewController.h */,
+				A05B1DF91424A7B400163202 /* RootViewController.m */,
+				A05B1DFB1424A7B400163202 /* RootViewController.xib */,
+				A05B1DEA1424A7B400163202 /* Supporting Files */,
+			);
+			path = HackAzure;
+			sourceTree = "<group>";
+		};
+		A05B1DEA1424A7B400163202 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A05B1DEB1424A7B400163202 /* HackAzure-Info.plist */,
+				A05B1DEC1424A7B400163202 /* InfoPlist.strings */,
+				A05B1DEF1424A7B400163202 /* main.m */,
+				A05B1DF11424A7B400163202 /* HackAzure-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A05B1DDE1424A7B400163202 /* HackAzure */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A05B1E001424A7B400163202 /* Build configuration list for PBXNativeTarget "HackAzure" */;
+			buildPhases = (
+				A05B1DDB1424A7B400163202 /* Sources */,
+				A05B1DDC1424A7B400163202 /* Frameworks */,
+				A05B1DDD1424A7B400163202 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HackAzure;
+			productName = HackAzure;
+			productReference = A05B1DDF1424A7B400163202 /* HackAzure.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A05B1DD61424A7B300163202 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = App3;
+			};
+			buildConfigurationList = A05B1DD91424A7B300163202 /* Build configuration list for PBXProject "HackAzure" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A05B1DD41424A7B300163202;
+			productRefGroup = A05B1DE01424A7B400163202 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A05B1DDE1424A7B400163202 /* HackAzure */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A05B1DDD1424A7B400163202 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A05B1DEE1424A7B400163202 /* InfoPlist.strings in Resources */,
+				A05B1DF71424A7B400163202 /* MainWindow.xib in Resources */,
+				A05B1DFD1424A7B400163202 /* RootViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A05B1DDB1424A7B400163202 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A05B1DF01424A7B400163202 /* main.m in Sources */,
+				A05B1DF41424A7B400163202 /* HackAzureAppDelegate.m in Sources */,
+				A05B1DFA1424A7B400163202 /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A05B1DEC1424A7B400163202 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A05B1DED1424A7B400163202 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A05B1DF51424A7B400163202 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A05B1DF61424A7B400163202 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		A05B1DFB1424A7B400163202 /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A05B1DFC1424A7B400163202 /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A05B1DFE1424A7B400163202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A05B1DFF1424A7B400163202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A05B1E011424A7B400163202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HackAzure/HackAzure-Prefix.pch";
+				INFOPLIST_FILE = "HackAzure/HackAzure-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A05B1E021424A7B400163202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HackAzure/HackAzure-Prefix.pch";
+				INFOPLIST_FILE = "HackAzure/HackAzure-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A05B1DD91424A7B300163202 /* Build configuration list for PBXProject "HackAzure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A05B1DFE1424A7B400163202 /* Debug */,
+				A05B1DFF1424A7B400163202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A05B1E001424A7B400163202 /* Build configuration list for PBXNativeTarget "HackAzure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A05B1E011424A7B400163202 /* Debug */,
+				A05B1E021424A7B400163202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A05B1DD61424A7B300163202 /* Project object */;
+}
