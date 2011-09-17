@@ -21,6 +21,8 @@
 		A05B1DF71424A7B400163202 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05B1DF51424A7B400163202 /* MainWindow.xib */; };
 		A05B1DFA1424A7B400163202 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05B1DF91424A7B400163202 /* RootViewController.m */; };
 		A05B1DFD1424A7B400163202 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05B1DFB1424A7B400163202 /* RootViewController.xib */; };
+		A05B1E1C1424B20A00163202 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05B1E1B1424B20A00163202 /* AddressBook.framework */; };
+		A05B1E1F1424B4F000163202 /* AddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A05B1E1E1424B4F000163202 /* AddressBookManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,9 @@
 		A05B1DF81424A7B400163202 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		A05B1DF91424A7B400163202 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		A05B1DFC1424A7B400163202 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		A05B1E1B1424B20A00163202 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		A05B1E1D1424B4F000163202 /* AddressBookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookManager.h; sourceTree = "<group>"; };
+		A05B1E1E1424B4F000163202 /* AddressBookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +88,7 @@
 				A05B1DE41424A7B400163202 /* UIKit.framework in Frameworks */,
 				A05B1DE61424A7B400163202 /* Foundation.framework in Frameworks */,
 				A05B1DE81424A7B400163202 /* CoreGraphics.framework in Frameworks */,
+				A05B1E1C1424B20A00163202 /* AddressBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +151,7 @@
 				A05B1DE31424A7B400163202 /* UIKit.framework */,
 				A05B1DE51424A7B400163202 /* Foundation.framework */,
 				A05B1DE71424A7B400163202 /* CoreGraphics.framework */,
+				A05B1E1B1424B20A00163202 /* AddressBook.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,6 +166,8 @@
 				A05B1DF81424A7B400163202 /* RootViewController.h */,
 				A05B1DF91424A7B400163202 /* RootViewController.m */,
 				A05B1DFB1424A7B400163202 /* RootViewController.xib */,
+				A05B1E1D1424B4F000163202 /* AddressBookManager.h */,
+				A05B1E1E1424B4F000163202 /* AddressBookManager.m */,
 				A05B1DEA1424A7B400163202 /* Supporting Files */,
 			);
 			path = HackAzure;
@@ -268,6 +277,7 @@
 				565CF9E91424A99700BE7074 /* ServiceCall.m in Sources */,
 				565CF9EA1424A99700BE7074 /* UIViewController+ShowError.m in Sources */,
 				565CF9EB1424A99700BE7074 /* WAConfiguration.m in Sources */,
+				A05B1E1F1424B4F000163202 /* AddressBookManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "AddressBookManager.h"
 
 @implementation RootViewController
 
@@ -24,6 +25,11 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    AddressBookManager *abManager = [[AddressBookManager alloc] init];
+    
+    
+    [abManager release];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
