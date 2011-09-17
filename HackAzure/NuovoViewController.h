@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddressBookManager.h"
 #import "WACloudStorageClient.h"
 
 @protocol NuovoViewControllerDelegate <NSObject>

@@ -16,6 +16,7 @@
 @synthesize messaggio;
 @synthesize destinatario;
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -96,8 +97,13 @@
 
 - (void)sendPressed:(id)sender
 {
-    NSString *message = [NSString stringWithFormat:@"%@#%@", self.destinatario.text, self.messaggio.text];
+    AddressBookManager *a = [[AddressBookManager alloc] init];
+    
+    NSString *message = [NSString stringWithFormat:@"%@#%@", a.userNumber, self.messaggio.text];
+    
+    
     NSString *queueName = [NSString stringWithFormat:@"n%@", self.destinatario.text];
+    
     [client addMessageToQueue:message queueName:queueName];
 }
 
