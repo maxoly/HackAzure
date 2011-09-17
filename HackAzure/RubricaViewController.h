@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "NuovoViewController.h"
 
 @class AddressBookManager;
+
+
 
 @interface RubricaViewController : UITableViewController {
     

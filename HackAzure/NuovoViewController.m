@@ -14,7 +14,7 @@
 @synthesize messaggio;
 @synthesize destinatario;
 @synthesize invia;
-
+@synthesize dest;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,6 +39,11 @@
 }
 
 #pragma mark - View lifecycle
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.destinatario.text = self.dest;
+}
 
 - (void)viewDidLoad
 {

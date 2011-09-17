@@ -18,7 +18,6 @@
 @property (nonatomic, retain, readwrite) IBOutlet UIButton *invia;
 
 
-
 - (IBAction)inviaPressed:(id)sender;
 - (IBAction)suka:(id)sender;
 @end

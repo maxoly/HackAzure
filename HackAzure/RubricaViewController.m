@@ -168,13 +168,16 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+    NSString *contactKey = [[_abManager.contacts allKeys] objectAtIndex:indexPath.row];
+  //  NSString *contactValue = [_abManager.contacts valueForKey:contactKey];
+    
+     NuovoViewController *detailViewController = [[NuovoViewController alloc] init];
+    detailViewController.dest = contactKey;
      // ...
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      [detailViewController release];
-     */
+    
 }
 
 @end
