@@ -17,7 +17,6 @@
     if (self) {
         
         _contacts = [[NSMutableDictionary alloc] init];
-        [self reload];
     }
     
     return self;
@@ -135,6 +134,7 @@
 - (void)setUserNumber:(NSString *)userNumber
 {
     [[NSUserDefaults standardUserDefaults] setValue:userNumber forKey:kDefaultsUserNumber];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (NSString *)userNumber

@@ -8,6 +8,7 @@
 
 #import "RubricaViewController.h"
 #import "AddressBookManager.h"
+#import "UserNumberViewController.h"
 
 
 @implementation RubricaViewController
@@ -66,6 +67,14 @@
     [super viewDidAppear:animated];
     
     AddressBookManager *abManager = [[AddressBookManager alloc] init];
+    
+    if (abManager.userNumber == nil) {
+        NSLog(@"user number is missing");
+        
+        UserNumberViewController *viewController = [[UserNumberViewController alloc] initWithNibName:@"UserNumberViewController" bundle:nil];
+        [self.navigationController pushViewController:viewController animated:YES];
+        [viewController release];
+    }
     
     NSLog(@"contacts: %@", abManager.contacts);
     
