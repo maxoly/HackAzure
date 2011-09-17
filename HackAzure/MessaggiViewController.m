@@ -9,7 +9,7 @@
 #import "MessaggiViewController.h"
 #import "HackAzureAppDelegate.h"
 #import "WAAuthenticationCredential.h"
-
+#import "AddressBookManager.h"
 #define sim @"3289433148"
 @implementation MessaggiViewController
 
@@ -40,7 +40,9 @@
     tableClient = [[WACloudStorageClient storageClientWithCredential:appDelegate.authenticationCredential] retain];
 	tableClient.delegate = self;
     
-    //[tableClient f:@"gvvv" fetchCount:1000];
+    AddressBookManager *abManager = [[AddressBookManager alloc] init];
+    [tableClient peekQueueMessages:[NSString stringWithFormat:@"n%@",abManager.userNumber] fetchCount:1000];
+    [abManager release];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -68,8 +70,17 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[managedObject valueForKey:@"from"] description];
+    
+    AddressBookManager *m = [[AddressBookManager alloc] init];
+    [m reload];
+    // 3334697192
+    NSString * from = [[managedObject valueForKey:@"from"] description];
+    NSString *name = [m contactNameForPhoneNumber:from];
+    
+    cell.textLabel.text = name;
     cell.detailTextLabel.text = [[managedObject valueForKey:@"text"] description];
+    
+    [m release];
 }
 
 // Customize the number of sections in the table view.
@@ -91,7 +102,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
     
     // Configure the cell.
@@ -171,7 +182,7 @@
     [super dealloc];
 }
 
-- (void)insertNewObject
+- (void)insertNewObject:(NSString *)text from:(NSString *)from messageid:(NSString *)messageid
 {
     // Create a new instance of the entity managed by the fetched results controller.
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
@@ -180,7 +191,10 @@
     
     // If appropriate, configure the new managed object.
     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:[NSDate date] forKey:@"text"];
+    [newManagedObject setValue:text forKey:@"text"];
+    [newManagedObject setValue:from forKey:@"from"];
+    [newManagedObject setValue:messageid forKey:@"messageid"];
+    [newManagedObject setValue:[NSDate date] forKey:@"created"];
     
     // Save the context.
     NSError *error = nil;
@@ -218,7 +232,7 @@
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"text" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"created" ascending:NO];
     NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -335,7 +349,34 @@
 - (void)storageClient:(WACloudStorageClient *)client didPeekQueueMessages:(NSArray *)queueMessages
 {
 	self.entityList = [[queueMessages mutableCopy] autorelease];
-	[self.tableView reloadData];
+	for (WAQueueMessage *mes in self.entityList) {
+        NSLog(@"%@", mes.messageText);
+        
+        
+        NSArray *mex = [mes.messageText componentsSeparatedByString:@"#"];
+        
+        if ([mex count] == 2) {
+            NSString *text = [mex objectAtIndex:1];
+            NSString *from = [mex objectAtIndex:0];
+            //mes.popReceipt = @"1";
+            
+            NSEntityDescription *entity = [NSEntityDescription entityForName:@"Message" inManagedObjectContext:self.managedObjectContext];
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"messageid = %@", mes.messageId];
+            NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+            [fetchRequest setEntity:entity];
+            [fetchRequest setPredicate:predicate];
+            NSArray *oldElements = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+            [fetchRequest release];
+            
+            if ([oldElements count] == 0)
+            {
+                [self insertNewObject:text from:from messageid:mes.messageId];
+            }
+        
+        }
+    }
+    
+    [self.tableView reloadData];
 }
 
 @end

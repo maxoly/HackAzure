@@ -7,9 +7,13 @@
 //
 
 #import "NuovoViewController.h"
-
+#import "HackAzureAppDelegate.h"
 
 @implementation NuovoViewController
+
+@synthesize messaggio;
+@synthesize destinatario;
+@synthesize invia;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,6 +42,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    HackAzureAppDelegate *appDelegate = (HackAzureAppDelegate *)[[UIApplication sharedApplication] delegate];
+	
+    
+    client = [[WACloudStorageClient storageClientWithCredential:appDelegate.authenticationCredential] retain];
+	client.delegate = self;
     
     self.navigationItem.title = @"Nuovo messaggio";
     // Do any additional setup after loading the view from its nib.
@@ -56,4 +65,16 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)inviaPressed:(id)sender
+{
+    NSString *message = [NSString stringWithFormat:@"%@#%@", self.destinatario.text, self.messaggio.text];
+    NSString *queueName = [NSString stringWithFormat:@"n%@", self.destinatario.text];
+    [client addMessageToQueue:message queueName:queueName];
+}
+
+- (IBAction)suka:(id)sender
+{
+    [self.destinatario resignFirstResponder];
+    [self.messaggio resignFirstResponder];
+}
 @end

@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-
-@interface NuovoViewController : UIViewController {
-    
+#import "WACloudStorageClient.h"
+@interface NuovoViewController : UIViewController<WACloudStorageClientDelegate> {
+    WACloudStorageClient *client;
 }
 
+@property (nonatomic, retain, readwrite) IBOutlet UITextField *destinatario;
+@property (nonatomic, retain, readwrite) IBOutlet UITextView *messaggio;
+@property (nonatomic, retain, readwrite) IBOutlet UIButton *invia;
+
+- (IBAction)inviaPressed:(id)sender;
+- (IBAction)suka:(id)sender;
 @end
