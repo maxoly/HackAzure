@@ -12,11 +12,20 @@
 #import "AddressBookManager.h"
 #define sim @"3289433148"
 @implementation MessaggiViewController
-
+@synthesize timer;
 @synthesize entityList;
 @synthesize fetchedResultsController=__fetchedResultsController;
-
+@synthesize cell = _cell;
 @synthesize managedObjectContext=__managedObjectContext;
+@synthesize address;
+- (void)azure
+{
+    dispatch_async(dispatch_get_main_queue(), ^(void) {
+        AddressBookManager *abManager = [[AddressBookManager alloc] init];
+        [tableClient peekQueueMessages:[NSString stringWithFormat:@"n%@",abManager.userNumber] fetchCount:1000];
+        [abManager release]; 
+    });
+}
 
 - (void)viewDidLoad
 {
@@ -24,25 +33,22 @@
     self.managedObjectContext = appDelegate.managedObjectContext;
     
     [super viewDidLoad];
-
+    
+    tableClient = [[WACloudStorageClient storageClientWithCredential:appDelegate.authenticationCredential] retain];
+    tableClient.delegate = self;
     
     self.navigationItem.title = @"Messaggi";
+    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target: self selector: @selector(azure) userInfo: nil repeats: YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
-    	
-    HackAzureAppDelegate *appDelegate = (HackAzureAppDelegate *)[[UIApplication sharedApplication] delegate];
-	
-    
-    tableClient = [[WACloudStorageClient storageClientWithCredential:appDelegate.authenticationCredential] retain];
-	tableClient.delegate = self;
-    
-    AddressBookManager *abManager = [[AddressBookManager alloc] init];
-    [tableClient peekQueueMessages:[NSString stringWithFormat:@"n%@",abManager.userNumber] fetchCount:1000];
-    [abManager release];
+    AddressBookManager *m = [[AddressBookManager alloc] init];
+    [m reload];
+    self.address = m;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -69,18 +75,46 @@
  */
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    Message *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    AddressBookManager *m = [[AddressBookManager alloc] init];
-    [m reload];
     // 3334697192
-    NSString * from = [[managedObject valueForKey:@"from"] description];
-    NSString *name = [m contactNameForPhoneNumber:from];
+    NSString * from = managedObject.from;
+    NSString *name = [self.address contactNameForPhoneNumber:from];
+    NSDate *created = managedObject.created;
     
-    cell.textLabel.text = name;
-    cell.detailTextLabel.text = [[managedObject valueForKey:@"text"] description];
+
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"dd"];
+    NSString *days = [dateFormat stringFromDate:created];
+    [dateFormat setDateFormat:@"MM"];
+    NSString *months = [dateFormat stringFromDate:created];
+    [dateFormat setDateFormat:@"yyyy"];
+    NSString *years = [dateFormat stringFromDate:created];
+    [dateFormat setDateFormat:@"hh:mm"];
+    NSString *hhmm = [dateFormat stringFromDate:created];
+    [dateFormat release];
     
-    [m release];
+    
+    UILabel *day = (UILabel *)[cell viewWithTag:1];
+    UILabel *month = (UILabel *)[cell viewWithTag:2];
+    UILabel *year = (UILabel *)[cell viewWithTag:3];
+    UILabel *time = (UILabel *)[cell viewWithTag:4];
+    UILabel *contact = (UILabel *)[cell viewWithTag:5];
+    UILabel *sms = (UILabel *) [cell viewWithTag:6];
+    
+
+    day.text = days;
+    month.text = months;
+    year.text = years;
+    contact.text = name;
+    time.text = hhmm;
+    sms.text = managedObject.text;
+    
+    
+    CGSize labelSize = [managedObject.text sizeWithFont:sms.font constrainedToSize:sms.frame.size lineBreakMode:sms.lineBreakMode];
+    sms.frame = CGRectMake(sms.frame.origin.x, sms.frame.origin.y, sms.frame.size.width, labelSize.height);
+    
+    //[m release];
 }
 
 // Customize the number of sections in the table view.
@@ -97,12 +131,15 @@
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
+{    
+    static NSString *CustomCellIdentifier = @"CustomCellIdentifier";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: CustomCellIdentifier];
+    
+    if (cell == nil)
+    {
+        [[NSBundle mainBundle] loadNibNamed:@"MexCell" owner:self options:nil];
+        cell = self.cell;
     }
     
     // Configure the cell.
@@ -371,12 +408,13 @@
             if ([oldElements count] == 0)
             {
                 [self insertNewObject:text from:from messageid:mes.messageId];
+        
             }
         
         }
     }
     
-    [self.tableView reloadData];
+    //[self.tableView reloadData];
 }
 
 @end
