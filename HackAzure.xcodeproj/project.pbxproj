@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		565CF9E91424A99700BE7074 /* ServiceCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 565CF9E41424A99700BE7074 /* ServiceCall.m */; };
+		565CF9EA1424A99700BE7074 /* UIViewController+ShowError.m in Sources */ = {isa = PBXBuildFile; fileRef = 565CF9E61424A99700BE7074 /* UIViewController+ShowError.m */; };
+		565CF9EB1424A99700BE7074 /* WAConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 565CF9E81424A99700BE7074 /* WAConfiguration.m */; };
+		565CF9ED1424A9B600BE7074 /* libwatoolkitios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 565CF9EC1424A9B600BE7074 /* libwatoolkitios.a */; };
+		565CF9EF1424AA5600BE7074 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 565CF9EE1424AA5600BE7074 /* libxml2.2.dylib */; };
 		A05B1DE41424A7B400163202 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05B1DE31424A7B400163202 /* UIKit.framework */; };
 		A05B1DE61424A7B400163202 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05B1DE51424A7B400163202 /* Foundation.framework */; };
 		A05B1DE81424A7B400163202 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05B1DE71424A7B400163202 /* CoreGraphics.framework */; };
@@ -18,7 +23,40 @@
 		A05B1DFD1424A7B400163202 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05B1DFB1424A7B400163202 /* RootViewController.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		565CF9CA1424A93500BE7074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 565CF9C21424A93500BE7074 /* watoolkitios-lib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F4F5239B1374612A004434B5;
+			remoteInfo = "watoolkitios-lib";
+		};
+		565CF9CC1424A93500BE7074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 565CF9C21424A93500BE7074 /* watoolkitios-lib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F4F998F7138DC6C100254B51;
+			remoteInfo = "watoolkitios-lib-test";
+		};
+		565CF9F01424AAA300BE7074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 565CF9C21424A93500BE7074 /* watoolkitios-lib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 27E7D68C1345118600F142F7;
+			remoteInfo = "watoolkitios-lib";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		565CF9C21424A93500BE7074 /* watoolkitios-lib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "watoolkitios-lib.xcodeproj"; path = "HackAzure/library/watoolkitios-lib.xcodeproj"; sourceTree = "<group>"; };
+		565CF9E31424A99700BE7074 /* ServiceCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceCall.h; sourceTree = "<group>"; };
+		565CF9E41424A99700BE7074 /* ServiceCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceCall.m; sourceTree = "<group>"; };
+		565CF9E51424A99700BE7074 /* UIViewController+ShowError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ShowError.h"; sourceTree = "<group>"; };
+		565CF9E61424A99700BE7074 /* UIViewController+ShowError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ShowError.m"; sourceTree = "<group>"; };
+		565CF9E71424A99700BE7074 /* WAConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAConfiguration.h; sourceTree = "<group>"; };
+		565CF9E81424A99700BE7074 /* WAConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAConfiguration.m; sourceTree = "<group>"; };
+		565CF9EC1424A9B600BE7074 /* libwatoolkitios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libwatoolkitios.a; sourceTree = SOURCE_ROOT; };
+		565CF9EE1424AA5600BE7074 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		A05B1DDF1424A7B400163202 /* HackAzure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackAzure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05B1DE31424A7B400163202 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A05B1DE51424A7B400163202 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -40,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				565CF9EF1424AA5600BE7074 /* libxml2.2.dylib in Frameworks */,
+				565CF9ED1424A9B600BE7074 /* libwatoolkitios.a in Frameworks */,
 				A05B1DE41424A7B400163202 /* UIKit.framework in Frameworks */,
 				A05B1DE61424A7B400163202 /* Foundation.framework in Frameworks */,
 				A05B1DE81424A7B400163202 /* CoreGraphics.framework in Frameworks */,
@@ -49,9 +89,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		565CF9C01424A92600BE7074 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				565CF9C21424A93500BE7074 /* watoolkitios-lib.xcodeproj */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		565CF9C31424A93500BE7074 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				565CF9CB1424A93500BE7074 /* libwatoolkitios.a */,
+				565CF9CD1424A93500BE7074 /* watoolkitios-lib-test.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		565CF9E21424A99700BE7074 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				565CF9E31424A99700BE7074 /* ServiceCall.h */,
+				565CF9E41424A99700BE7074 /* ServiceCall.m */,
+				565CF9E51424A99700BE7074 /* UIViewController+ShowError.h */,
+				565CF9E61424A99700BE7074 /* UIViewController+ShowError.m */,
+				565CF9E71424A99700BE7074 /* WAConfiguration.h */,
+				565CF9E81424A99700BE7074 /* WAConfiguration.m */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		A05B1DD41424A7B300163202 = {
 			isa = PBXGroup;
 			children = (
+				565CF9C01424A92600BE7074 /* Library */,
 				A05B1DE91424A7B400163202 /* HackAzure */,
 				A05B1DE21424A7B400163202 /* Frameworks */,
 				A05B1DE01424A7B400163202 /* Products */,
@@ -69,6 +140,8 @@
 		A05B1DE21424A7B400163202 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				565CF9EE1424AA5600BE7074 /* libxml2.2.dylib */,
+				565CF9EC1424A9B600BE7074 /* libwatoolkitios.a */,
 				A05B1DE31424A7B400163202 /* UIKit.framework */,
 				A05B1DE51424A7B400163202 /* Foundation.framework */,
 				A05B1DE71424A7B400163202 /* CoreGraphics.framework */,
@@ -79,6 +152,7 @@
 		A05B1DE91424A7B400163202 /* HackAzure */ = {
 			isa = PBXGroup;
 			children = (
+				565CF9E21424A99700BE7074 /* Configuration */,
 				A05B1DF21424A7B400163202 /* HackAzureAppDelegate.h */,
 				A05B1DF31424A7B400163202 /* HackAzureAppDelegate.m */,
 				A05B1DF51424A7B400163202 /* MainWindow.xib */,
@@ -115,6 +189,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				565CF9F11424AAA300BE7074 /* PBXTargetDependency */,
 			);
 			name = HackAzure;
 			productName = HackAzure;
@@ -139,12 +214,35 @@
 			mainGroup = A05B1DD41424A7B300163202;
 			productRefGroup = A05B1DE01424A7B400163202 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 565CF9C31424A93500BE7074 /* Products */;
+					ProjectRef = 565CF9C21424A93500BE7074 /* watoolkitios-lib.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A05B1DDE1424A7B400163202 /* HackAzure */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		565CF9CB1424A93500BE7074 /* libwatoolkitios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libwatoolkitios.a;
+			remoteRef = 565CF9CA1424A93500BE7074 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		565CF9CD1424A93500BE7074 /* watoolkitios-lib-test.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "watoolkitios-lib-test.octest";
+			remoteRef = 565CF9CC1424A93500BE7074 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A05B1DDD1424A7B400163202 /* Resources */ = {
@@ -167,10 +265,21 @@
 				A05B1DF01424A7B400163202 /* main.m in Sources */,
 				A05B1DF41424A7B400163202 /* HackAzureAppDelegate.m in Sources */,
 				A05B1DFA1424A7B400163202 /* RootViewController.m in Sources */,
+				565CF9E91424A99700BE7074 /* ServiceCall.m in Sources */,
+				565CF9EA1424A99700BE7074 /* UIViewController+ShowError.m in Sources */,
+				565CF9EB1424A99700BE7074 /* WAConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		565CF9F11424AAA300BE7074 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "watoolkitios-lib";
+			targetProxy = 565CF9F01424AAA300BE7074 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A05B1DEC1424A7B400163202 /* InfoPlist.strings */ = {
@@ -219,7 +328,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -236,7 +345,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -246,9 +355,24 @@
 		A05B1E011424A7B400163202 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HackAzure/HackAzure-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/**",
+					"/usr/include/libxml2/**",
+				);
 				INFOPLIST_FILE = "HackAzure/HackAzure-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(BUILT_PRODUCTS_DIR)/Build/$(BUILD_STYLE)-$(PLATFORM_NAME)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -257,9 +381,24 @@
 		A05B1E021424A7B400163202 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HackAzure/HackAzure-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/**",
+					"/usr/include/libxml2/**",
+				);
 				INFOPLIST_FILE = "HackAzure/HackAzure-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(BUILT_PRODUCTS_DIR)/Build/$(BUILD_STYLE)-$(PLATFORM_NAME)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -284,6 +423,7 @@
 				A05B1E021424A7B400163202 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
