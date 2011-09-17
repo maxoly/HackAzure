@@ -114,7 +114,8 @@
             if (phoneLocalizedLabel != nil && phoneNumber != nil) {
                 phoneNumber = [self parsePhoneNumber:phoneNumber];
                 if ([phoneLocalizedLabel isEqualToString:@"iPhone"]) {
-                    NSLog(@"%@ - %@ (%@)", name, phoneNumber, phoneLocalizedLabel);
+                    // NSLog(@"%@ - %@ (%@)", name, phoneNumber, phoneLocalizedLabel);
+                    [_contacts setValue:name forKey:phoneNumber];
                 }
             }
         }

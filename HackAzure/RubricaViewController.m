@@ -67,6 +67,7 @@
     
     AddressBookManager *abManager = [[AddressBookManager alloc] init];
     
+    NSLog(@"contacts: %@", abManager.contacts);
     
     [abManager release];
 }
