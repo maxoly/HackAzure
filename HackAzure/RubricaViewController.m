@@ -44,9 +44,6 @@
     self.navigationItem.title = @"Rubrica";
 
     _abManager = [[AddressBookManager alloc] init];
-    
-    [_abManager reload];
-    NSLog(@"contacts: %@", _abManager.contacts);
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -67,6 +64,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    [_abManager reload];
+    NSLog(@"contacts: %@", _abManager.contacts);
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -168,7 +168,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     // Navigation logic may go here. Create and push another view controller.
-    NSString *contactKey = [[_abManager.contacts allKeys] objectAtIndex:indexPath.row];
+   NSString *contactKey = [[_abManager.contacts allKeys] objectAtIndex:indexPath.row];
   //  NSString *contactValue = [_abManager.contacts valueForKey:contactKey];
     
      NuovoViewController *detailViewController = [[NuovoViewController alloc] init];

@@ -9,15 +9,27 @@
 #import <UIKit/UIKit.h>
 #import "AddressBookManager.h"
 #import "WACloudStorageClient.h"
-@interface NuovoViewController : UIViewController<WACloudStorageClientDelegate> {
+
+@protocol NuovoViewControllerDelegate <NSObject>
+
+- (void)dismissVideoPicker:(id)sender;
+
+@end
+
+
+@interface NuovoViewController : UIViewController<WACloudStorageClientDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, NuovoViewControllerDelegate> {
+    WABlobContainer *selectedContainer;
     WACloudStorageClient *client;
 }
 
 @property (nonatomic, retain, readwrite) IBOutlet UITextField *destinatario;
 @property (nonatomic, retain, readwrite) IBOutlet UITextView *messaggio;
-@property (nonatomic, retain, readwrite) IBOutlet UIButton *invia;
+@property (nonatomic, retain) WABlobContainer *selectedContainer;
+@property (nonatomic, retain, readwrite)  NSString *dest;
 
 
-- (IBAction)inviaPressed:(id)sender;
-- (IBAction)suka:(id)sender;
+- (IBAction)sendPressed:(id)sender;
+- (IBAction)transparentButtonPressed:(id)sender;
+- (IBAction)addVideoPressed:(id)sender;
+
 @end

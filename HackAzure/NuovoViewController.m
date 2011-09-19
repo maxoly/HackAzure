@@ -8,13 +8,15 @@
 
 #import "NuovoViewController.h"
 #import "HackAzureAppDelegate.h"
+#import "VideoPickerViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation NuovoViewController
 
 @synthesize messaggio;
 @synthesize destinatario;
-@synthesize invia;
 @synthesize dest;
+@synthesize selectedContainer;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,48 +32,74 @@
     [super dealloc];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
-
 #pragma mark - View lifecycle
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    self.destinatario.text = self.dest;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     HackAzureAppDelegate *appDelegate = (HackAzureAppDelegate *)[[UIApplication sharedApplication] delegate];
-	
     
     client = [[WACloudStorageClient storageClientWithCredential:appDelegate.authenticationCredential] retain];
 	client.delegate = self;
     
     self.navigationItem.title = @"Nuovo messaggio";
-    // Do any additional setup after loading the view from its nib.
+
+    UIBarButtonItem *sendButton = [[UIBarButtonItem alloc] initWithTitle:@"Invia" style:UIBarButtonItemStylePlain target:self action:@selector(sendPressed:)];
+    self.navigationItem.rightBarButtonItem = sendButton;
+    [sendButton release];
+
+    self.messaggio.layer.borderColor = [[UIColor blackColor] CGColor];
+    self.messaggio.layer.borderWidth = 1.f;
+    self.messaggio.layer.cornerRadius = 8.f;
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+
+    self.messaggio = nil;
+    self.destinatario = nil;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+- (void)viewWillAppear:(BOOL)animated
 {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	[super viewDidAppear:animated];
+    
+     self.destinatario.text = self.dest;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:self.view.window]; 
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:self.view.window]; 
 }
 
-- (IBAction)inviaPressed:(id)sender
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+	[[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+    
+    [super viewDidDisappear:animated];
+}
+
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    dispatch_async(dispatch_get_main_queue(), ^(void) {
+        CGRect frame = self.view.frame;
+        frame.size.height = 367 - (216 - 49);
+        self.view.frame = frame;
+    });
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification
+{
+    dispatch_async(dispatch_get_main_queue(), ^(void) {
+        CGRect frame = self.view.frame;
+        frame.size.height = 367;
+        self.view.frame = frame;
+    });
+}
+
+- (void)sendPressed:(id)sender
 {
     AddressBookManager *a = [[AddressBookManager alloc] init];
     
@@ -83,9 +111,47 @@
     [client addMessageToQueue:message queueName:queueName];
 }
 
-- (IBAction)suka:(id)sender
+- (void)transparentButtonPressed:(id)sender
 {
     [self.destinatario resignFirstResponder];
     [self.messaggio resignFirstResponder];
 }
+
+- (void)addVideoPressed:(id)sender
+{
+    VideoPickerViewController *viewController = [[VideoPickerViewController alloc] initWithNibName:@"VideoPickerViewController" bundle:nil];
+    viewController.nuovoViewControllerDelegate = self;
+    [self presentModalViewController:viewController animated:YES];
+    [viewController release];
+}
+
+- (void)dismissVideoPicker:(id)sender
+{
+    VideoPickerViewController *viewController = (VideoPickerViewController *) sender;
+    NSLog(@"%@", viewController.moviePath);
+    
+    [client fetchBlobContainerNamed:@"test" withCompletionHandler:^(WABlobContainer * cont, NSError * err) {
+        
+        NSData *video = [NSData dataWithContentsOfFile:viewController.moviePath];
+        
+        [client addBlobToContainer:cont 
+                          blobName:@"marcuzzo" 
+                       contentData:video
+                       contentType:@"video/mp4"
+             withCompletionHandler:^(NSError* error) 
+         {
+             if(error)
+             {
+                // [self showError:error];
+                 return;
+             }
+             
+             [self dismissModalViewControllerAnimated:NO];
+             [self.navigationController popViewControllerAnimated:YES];
+         }];
+    }];
+  
+
+}
+
 @end

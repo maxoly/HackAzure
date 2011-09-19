@@ -36,6 +36,11 @@
 		A05B1DF71424A7B400163202 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05B1DF51424A7B400163202 /* MainWindow.xib */; };
 		A05B1DFA1424A7B400163202 /* MessaggiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05B1DF91424A7B400163202 /* MessaggiViewController.m */; };
 		A05B1DFD1424A7B400163202 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05B1DFB1424A7B400163202 /* RootViewController.xib */; };
+		A0BC11781424ECAC0027B20B /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = A0BC11771424ECAC0027B20B /* button.png */; };
+		A0BC117A1424F3660027B20B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BC11791424F3660027B20B /* MobileCoreServices.framework */; };
+		A0BC117E1424F76E0027B20B /* VideoPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BC117C1424F76D0027B20B /* VideoPickerViewController.m */; };
+		A0BC117F1424F76E0027B20B /* VideoPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0BC117D1424F76D0027B20B /* VideoPickerViewController.xib */; };
+		A0BC118B1424FA6D0027B20B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BC118A1424FA6D0027B20B /* AVFoundation.framework */; };
 		A0BE8C911424CE5500046D46 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BE8C901424CE5500046D46 /* AddressBook.framework */; };
 		A0BE8C941424CEB000046D46 /* AddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BE8C931424CEB000046D46 /* AddressBookManager.m */; };
 		A0BE8C981424D12E00046D46 /* UserNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BE8C961424D12E00046D46 /* UserNumberViewController.m */; };
@@ -109,6 +114,12 @@
 		A05B1DF81424A7B400163202 /* MessaggiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessaggiViewController.h; sourceTree = "<group>"; };
 		A05B1DF91424A7B400163202 /* MessaggiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessaggiViewController.m; sourceTree = "<group>"; };
 		A05B1DFC1424A7B400163202 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		A0BC11771424ECAC0027B20B /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		A0BC11791424F3660027B20B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A0BC117B1424F76D0027B20B /* VideoPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPickerViewController.h; sourceTree = "<group>"; };
+		A0BC117C1424F76D0027B20B /* VideoPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPickerViewController.m; sourceTree = "<group>"; };
+		A0BC117D1424F76D0027B20B /* VideoPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoPickerViewController.xib; sourceTree = "<group>"; };
+		A0BC118A1424FA6D0027B20B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A0BE8C901424CE5500046D46 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		A0BE8C921424CEB000046D46 /* AddressBookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookManager.h; sourceTree = "<group>"; };
 		A0BE8C931424CEB000046D46 /* AddressBookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookManager.m; sourceTree = "<group>"; };
@@ -122,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0BC118B1424FA6D0027B20B /* AVFoundation.framework in Frameworks */,
 				565CF9EF1424AA5600BE7074 /* libxml2.2.dylib in Frameworks */,
 				565CF9ED1424A9B600BE7074 /* libwatoolkitios.a in Frameworks */,
 				A05B1DE41424A7B400163202 /* UIKit.framework in Frameworks */,
@@ -129,6 +141,7 @@
 				A05B1DE81424A7B400163202 /* CoreGraphics.framework in Frameworks */,
 				565CFA761424C7B200BE7074 /* CoreData.framework in Frameworks */,
 				A0BE8C911424CE5500046D46 /* AddressBook.framework in Frameworks */,
+				A0BC117A1424F3660027B20B /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +218,7 @@
 		A05B1DE21424A7B400163202 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A0BC118A1424FA6D0027B20B /* AVFoundation.framework */,
 				565CF9EE1424AA5600BE7074 /* libxml2.2.dylib */,
 				565CF9EC1424A9B600BE7074 /* libwatoolkitios.a */,
 				A05B1DE31424A7B400163202 /* UIKit.framework */,
@@ -212,6 +226,7 @@
 				A05B1DE71424A7B400163202 /* CoreGraphics.framework */,
 				565CFA751424C7B100BE7074 /* CoreData.framework */,
 				A0BE8C901424CE5500046D46 /* AddressBook.framework */,
+				A0BC11791424F3660027B20B /* MobileCoreServices.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -219,6 +234,7 @@
 		A05B1DE91424A7B400163202 /* HackAzure */ = {
 			isa = PBXGroup;
 			children = (
+				A0BC11771424ECAC0027B20B /* button.png */,
 				565CFABE1424EA6500BE7074 /* cell */,
 				565CF9E21424A99700BE7074 /* Configuration */,
 				A05B1DF21424A7B400163202 /* HackAzureAppDelegate.h */,
@@ -240,6 +256,9 @@
 				A0BE8C951424D12E00046D46 /* UserNumberViewController.h */,
 				A0BE8C961424D12E00046D46 /* UserNumberViewController.m */,
 				A0BE8C971424D12E00046D46 /* UserNumberViewController.xib */,
+				A0BC117B1424F76D0027B20B /* VideoPickerViewController.h */,
+				A0BC117C1424F76D0027B20B /* VideoPickerViewController.m */,
+				A0BC117D1424F76D0027B20B /* VideoPickerViewController.xib */,
 				565CFAC91424F43900BE7074 /* Message.h */,
 				565CFACA1424F43A00BE7074 /* Message.m */,
 			);
@@ -349,6 +368,8 @@
 				565CFA371424C68600BE7074 /* RubricaViewController.xib in Resources */,
 				565CFA3C1424C6E000BE7074 /* NuovoViewController.xib in Resources */,
 				A0BE8C991424D12E00046D46 /* UserNumberViewController.xib in Resources */,
+				A0BC11781424ECAC0027B20B /* button.png in Resources */,
+				A0BC117F1424F76E0027B20B /* VideoPickerViewController.xib in Resources */,
 				565CFAC01424EA7E00BE7074 /* MexCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +393,7 @@
 				A0BE8C941424CEB000046D46 /* AddressBookManager.m in Sources */,
 				A0BE8C981424D12E00046D46 /* UserNumberViewController.m in Sources */,
 				A01A26871424DB130032B92C /* OrderedDictionary.m in Sources */,
+				A0BC117E1424F76E0027B20B /* VideoPickerViewController.m in Sources */,
 				565CFACB1424F43E00BE7074 /* Message.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
