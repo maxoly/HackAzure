@@ -133,9 +133,12 @@
     [client fetchBlobContainerNamed:@"test" withCompletionHandler:^(WABlobContainer * cont, NSError * err) {
         
         NSData *video = [NSData dataWithContentsOfFile:viewController.moviePath];
+        NSDate *date = [NSDate date];
+        NSDateFormatter *fo = [[NSDateFormatter alloc] init];
+        [fo setDateFormat:@"yyyy-MM-dd_hh-mm-ss.mp4"];
         
         [client addBlobToContainer:cont 
-                          blobName:@"marcuzzo" 
+                          blobName:[fo stringFromDate:date]
                        contentData:video
                        contentType:@"video/mp4"
              withCompletionHandler:^(NSError* error) 
